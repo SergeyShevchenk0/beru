@@ -7,7 +7,7 @@ $time_now = time();
 $now = new DateTime(date('r', $time_now));
 $frames = array();
 $delays = array();
-$image = imagecreatefrompng('../countdown.png');
+$image = imagecreatefrompng('countdown.png');
 $delay = 100; // milliseconds
 $font = array(
     'size' => 95, // Font size, in pts usually.
@@ -33,7 +33,7 @@ for($i = 0; $i <= 60; $i++){
         break;
     } else {
         // Open the first source image and add the text.
-        $image = imagecreatefrompng('https://yadi.sk/d/_Vh7kHrvuUmI-Q/countdown.png');;
+        $image = imagecreatefrompng('countdown.png');;
         $text = $interval->format('%H:%I:%S');
         // %a is weird in that it doesn’t give you a two digit number
         // check if it starts with a single digit 0-9
